@@ -15,10 +15,13 @@
   <body>
     <div class="wrapper">
       <header>
-        <a href="{{ site.github.owner_url }}" target="_blank"> <h1>{{ site.title | default: site.github.repository_name }}</h1> </a>
+        <div class="avatar-container">
+          <img src="https://pbs.twimg.com/profile_images/931506020274331648/pV8N-Nkp_400x400.jpg">
+          <a href="{{ site.github.owner_url }}" target="_blank"> <h1>{{ site.title | default: site.github.repository_name }}</h1> </a>
+        </div>
         <p>{{ site.description | default: site.github.project_tagline }}</p>
         <p class="view"><a href="{{ site.github.owner_url }}">View My GitHub Profile</a></p>
-        <!--
+          <!--
         <h3>Posts</h3>
           <div>
             {% for post in site.posts %}

@@ -14,12 +14,12 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: Aurelio Grott
-email: grott.aurelio@gmail.com
+email: aurelio@grott.me
 description: # this means to ignore newlines until "baseurl:"
   Ruby on Rails developer, free software enthusiast, beer lover and frustrated musician.
   Software Engineer at Jobscore.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://grott.me" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://grott.me" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: lelogrott
 github_username:  lelogrott
 
