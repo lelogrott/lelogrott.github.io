@@ -1,0 +1,14 @@
+i {
+
+  &.github-icon::before {
+    content: url(/assets/icons/github-icon.svg);
+  }
+
+  &.twitter-icon::before {
+    content: url(/assets/icons/twitter-icon.svg);
+  }
+
+  &.instagram-icon::before {
+    content: url(/assets/icons/instagram-icon.svg);
+  }
+}

@@ -22,7 +22,8 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://grott.me" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: lelogrott
 github_username:  lelogrott
-
+twitter_url: https://twitter.com/lelogrott
+instagram_url: https://instagram.com/lelogrott
 # Build settings
 markdown: kramdown
 theme: jekyll-theme-minimal
