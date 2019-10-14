@@ -11,4 +11,8 @@ i {
   &.instagram-icon::before {
     content: url(/assets/icons/instagram-icon.svg);
   }
+
+  &.email-icon::before {
+    content: url(/assets/icons/email-icon.svg);
+  }
 }
