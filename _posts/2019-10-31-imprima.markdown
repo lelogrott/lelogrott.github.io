@@ -1,0 +1,72 @@
+---
+layout: home
+title:  "Imprima - First Game Dev Experience"
+date:   2019-10-31 09:06:00 -0700
+category: Dev
+tags: [indie game, game development, unity]
+---
+
+![Imprima - logo]({{site.url}}/assets/img/imprima-logo.jpg)
+
+I've always been a fan of video games, since when I was a kid I was the guy that liked every genre and platform (of course I had my favorites).
+This passion is still in me and when developing Imprima I discovered that it is amazing how you can have fun coding and playing it afterwards.
+
+<div align="center">
+  <img height="200px" src="{{site.url}}/assets/img/enzo-idle-gif.gif"/>
+  <br/><small>Idle animation of the main character Enzo.</small><br/><br/>
+</div>
+
+Developing a game had always been in my bucket list but I thought didn't have enough time on my hands to study engines and search through tutorials. That's when [Jogabilidade](https://www.youtube.com/jogabilidade) announced the [3rd Jogabilijam](https://jams.gamejolt.io/jogabilijam3).
+
+The thing is that it is surprinsingly easy to delay your activities or even give up when you don't have a deadline or broken-down tasks to work on, breaking big tasks down to really specific features was the key, that showed me that I didn't need a big time window to dedicate to the project, I could work a couple of hours a day continuously delivering small parts of the game. Some of the tasks were:
+
+- Watch <a href="https://learn.unity.com/project/2d-roguelike-tutorial">2D Rogue Like Unity tutorial</a>;
+- Code the exact same game;
+- Create the story of the game, what is Enzo doing? What's his goal?
+- Improve main character movement;
+- Improve enemie's movement;
+- Add power ups;
+- Add collectibles;
+- Add inventory;
+- Add laser beam;
+
+and so on.
+
+I started to develop it in my spare time and I wanted to make it right, so I started searching for engine and mechanics tutorials so I could use the correct patterns and tools, it was taking too long and we ([Wilkier](http://wilkier.com/) and I) would never deliver it in time. That's when they changed the deadline giving us one more week.
+
+__A SIGN__<small> - we thought.</small>
+
+So I started working non-stop on the project, also asked for [Leonardo](https://leocalca.com/) to come up with the splash art and Gabriel to compose a <a href="https://gamejolt.com/games/imprima/374632/download/soundtrack" target="_blank">couple of songs</a>.
+
+After 14 days with the help of 3 friends, lots of coffee, tutorials, bug fixes, rage, frustration and unslept nights, we were able to deliver a playable, good looking and good sounding (?) 2D rogue like game. This was my first game and an experience I will never forget.
+
+
+  <div align="center">
+    <img src="{{site.url}}/assets/img/splashart-imprima.jpg"/>
+    <small>Splash art by Leocalca.</small><br/><br/>
+  </div>
+
+
+Details of the game can be found below, hope you enjoy it!
+
+#### Official Game Page
+Link to the game page <a href="https://lelogrott.gamejolt.io/imprima" target="_blank">HERE</a>
+
+#### Theme
+There were two themes selected on a poll with the channel subscribers __Brazilian Cyberpunk__ and __Three Actions__. We decided to go with the first one.
+
+#### Lore
+Living in the favela in the city of Rio de Janeiro (Brazil), in a CyberPunk era, Enzo sees himself as hostage of the private companies in order to enhance his prosthetic body parts.
+Watching his suffer piling up with the reality of thousands of people that find themselves in the same position, Enzo decides to take an atitude and change the future of the country.
+
+Armed only with his backpack/3Dprinter/laser weapon, Enzo breaks into and tries to get to top floor of Protebras, prosthetic company that was recenlty privatized and now serves only the wealthy, in order to hack into their system and leak body parts projects so everyone may access.
+
+Find projects of prosthetic body parts and print them along the way instantly enhancing yourself. Be careful! Getting hits will break your new body parts! Colectables will help you to reprint them.
+
+#### Stop talking and show me the code
+The game was developed using Unity and the whole project with the C# scripts can be found in my github, more precisely in [THIS](https://github.com/lelogrott/imprima) repo.
+
+#### Gameplay
+<iframe width="560" height="315" src="https://www.youtube.com/embed/7LBKkzFgpKU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
