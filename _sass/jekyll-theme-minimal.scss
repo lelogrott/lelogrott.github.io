@@ -269,6 +269,9 @@ footer {
       text-align: center;
     }
   }
+  iframe {
+    max-width: 329px;
+  }
 }
 
 @media print {
