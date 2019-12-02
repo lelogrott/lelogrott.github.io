@@ -1,7 +1,8 @@
 ---
-layout: home
+layout: post
 title:  "Imprima - First Game Dev Experience"
 date:   2019-10-31 09:06:00 -0700
+comments: true
 category: Dev
 tags: [indie game, game development, unity]
 ---

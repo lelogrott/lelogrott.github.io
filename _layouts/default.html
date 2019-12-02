@@ -14,11 +14,19 @@
   </head>
   <body>
     <div class="wrapper">
-      <header>
-        <a href="{{ site.github.owner_url }}" target="_blank"> <h1>{{ site.title | default: site.github.repository_name }}</h1> </a>
-        <p>{{ site.description | default: site.github.project_tagline }}</p>
-        <p class="view"><a href="{{ site.github.owner_url }}">View My GitHub Profile</a></p>
-        <h3>Posts</h3>
+       <header>
+          <div class="avatar-container">
+            <img src="https://pbs.twimg.com/profile_images/931506020274331648/pV8N-Nkp_400x400.jpg">
+            <a href="{{ site.github.owner_url }}" target="_blank"> <h1>{{ site.title | default: site.github.repository_name }}</h1> </a>
+          </div>
+          <p>{{ site.description | default: site.github.project_tagline }}</p>
+          <p class="view">
+            <a href="{{ site.github.owner_url }}"><i class="github-icon"></i></a>
+            <a href="{{ site.twitter_url }}"><i class="twitter-icon"></i></a>
+            <a href="{{ site.instagram_url }}"><i class="instagram-icon"></i></a>
+            <a href="mailto:{{ site.email }}"><i class="email-icon"></i></a>
+          </p>
+          <h3>Posts</h3>
           <div>
             {% for post in site.posts %}
               <a href="{{ post.url }}">{{ post.title}}</a>
@@ -28,9 +36,27 @@
       </header>
       <section>
 
-      {{ content }}
+        {{ content }}
 
 
+        {% if page.comments %}
+          <br>
+          <div id="disqus_thread"></div>
+          <script>
+            var disqus_config = function () {
+              this.page.url = '{{site.url}}';  // Replace PAGE_URL with your page's canonical URL variable
+              this.page.identifier = '{{ page.url }}'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+            };
+
+            (function() { // DON'T EDIT BELOW THIS LINE
+              var d = document, s = d.createElement('script');
+              s.src = 'https://{{site.disqus_name}}.disqus.com/embed.js';
+              s.setAttribute('data-timestamp', +new Date());
+              (d.head || d.body).appendChild(s);
+            })();
+          </script>
+          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        {% endif %}
       </section>
       <footer>
         <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
