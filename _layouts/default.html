@@ -3,7 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <script data-ad-client="ca-pub-6460594244474551" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!-- disqus comment counter -->
+    <script id="dsq-count-scr" src="//grott-me.disqus.com/count.js?" async></script>
 
     {% seo %}
 
@@ -28,21 +29,21 @@
           <a href="mailto:{{ site.email }}"><i class="email-icon"></i></a>
         </p>
         <h3>Posts</h3>
-        <div>
-          {% for post in site.posts %}
-            <a href="{{ post.url }}">{{ post.title}}</a>
-            <div class="post-stats">
-              <i class="time-icon"></i>
-              <span class="published-date">
-                {{ post.date | date: "%b %-d, %Y" }}
-              </span> |
-              <a href="{{ post.url }}#disqus_thread">
-                <i class="comment-icon"></i>
-                <span class="disqus-comment-count" data-disqus-identifier="{{ post.disqus_identifier }}"></span>
-              </a>
-            </div>
-          {% endfor %}
-        </div>
+          <div>
+            {% for post in site.posts %}
+              <a href="{{ post.url }}">{{ post.title}}</a>
+              <div class="post-stats">
+                <i class="time-icon"></i>
+                <span class="published-date">
+                  {{ post.date | date: "%b %-d, %Y" }}
+                </span> |
+                <a href="{{ post.url }}#disqus_thread">
+                  <i class="comment-icon"></i>
+                  <span class="disqus-comment-count" data-disqus-identifier="{{ post.disqus_identifier }}"></span>
+                </a>
+              </div>
+            {% endfor %}
+          </div>
       </header>
       <section>
 
