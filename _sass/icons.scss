@@ -15,4 +15,12 @@ i {
   &.email-icon::before {
     content: url(/assets/icons/email-icon.svg);
   }
+
+  &.time-icon::before {
+    content: url(/assets/icons/time-icon.svg);
+  }
+
+  &.comment-icon::before {
+    content: url(/assets/icons/comment-icon.svg);
+  }
 }

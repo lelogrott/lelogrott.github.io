@@ -1,8 +1,11 @@
 ---
 layout: post
 title:  "Imprima - First Game Dev Experience"
+smmry: I've always been a fan of video games, since when I was a kid I was the guy that liked every genre and platform (of course I had my favorites). This passion is still in me and when developing Imprima I discovered that it is amazing how you can have fun coding and playing it afterwards.
+img: /assets/img/imprima-logo.jpg
 date:   2019-10-31 09:06:00 -0700
 comments: true
+disqus_identifier: comments_for_imprima
 category: Dev
 tags: [indie game, game development, unity]
 ---

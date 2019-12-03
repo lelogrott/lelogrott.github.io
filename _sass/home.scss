@@ -5,3 +5,26 @@ header div.avatar-container {
     border-radius: 50%;
   }
 }
+
+.article-preview {
+  border-bottom: solid 1px rgba(114, 114, 114, 0.2);
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+
+  &:last-child {
+    border: none;
+  }
+}
+.post-stats {
+  margin-top: -15px;
+  margin-left: -10px;
+
+  .time-icon {
+    position: relative;
+    top: 10px;
+  }
+
+  .published-date {
+    margin-left: -10px;
+  }
+}

@@ -3,7 +3,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <!-- adsense -->
     <script data-ad-client="ca-pub-6460594244474551" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!-- disqus comment counter -->
+    <script id="dsq-count-scr" src="//grott-me.disqus.com/count.js?" async></script>
 
     {% seo %}
 
@@ -31,15 +34,39 @@
           <div>
             {% for post in site.posts %}
               <a href="{{ post.url }}">{{ post.title}}</a>
-              <span class="postDate">{{ post.date | date: "%b %-d, %Y" }}</span>
+              <div class="post-stats">
+                <i class="time-icon"></i>
+                <span class="published-date">
+                  {{ post.date | date: "%b %-d, %Y" }}
+                </span> |
+                <a href="{{ post.url }}#disqus_thread">
+                  <i class="comment-icon"></i>
+                  <span class="disqus-comment-count" data-disqus-identifier="{{ post.disqus_identifier }}"></span>
+                </a>
+              </div>
             {% endfor %}
           </div>
       </header>
       <section>
 
         {% for post in site.posts %}
-          <h2>{{ post.title }}</h2>
-          {{ post.content }}
+        <div class="article-preview">
+          <a href="{{ post.url }}"><h2>{{ post.title }}</h2></a>
+          <a href="{{ post.url }}"><img src="{{site.url}}{{ post.img }}" /></a>
+          <div class="post-stats">
+            <i class="time-icon"></i>
+            <span class="published-date">
+              {{ post.date | date: "%b %-d, %Y" }}
+            </span> |
+            <a href="{{ post.url }}#disqus_thread">
+              <i class="comment-icon"></i>
+              <span class="disqus-comment-count" data-disqus-identifier="{{ post.disqus_identifier }}"></span>
+            </a>
+          </div>
+          <br>
+          {{ post.smmry }}
+          <br><a href="{{ post.url }}">read more >></a>
+        </div>
         {% endfor %}
 
       </section>
