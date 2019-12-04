@@ -27,6 +27,7 @@ google_analytics: UA-46402500-2
 disqus_name: grott-me
 permalinks: /post/:title/
 # Build settings
+repository: lelogrott/lelogrott.github.io
 markdown: kramdown
 theme: jekyll-theme-minimal
 plugins:
