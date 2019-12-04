@@ -70,7 +70,7 @@
             <small>
               {% for category in site.categories %}
                 {% capture category_name %}{{ category | first }}{% endcapture %}
-                  <a href="{{ site.url }}/categories/#{{ category_name | slugize }}">#{{ category_name | replace: "-", " " }}</a>
+                  <a href="{{ site.url }}/category/{{ category_name | slugize }}">#{{ category_name | replace: "-", " " }}</a>
               {% endfor %}
             </small>
           </div>
