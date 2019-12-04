@@ -48,7 +48,7 @@
         <h3>Categories</h3>
         {% for category in site.categories %}
           {% capture category_name %}{{ category | first }}{% endcapture %}
-            <a href="{{ site.url }}/category/{{ category_name | slugize }}">{{ category_name | replace: "-", " " }}</a>
+            <a href="{{ site.baseurl }}/category/{{ category_name | slugize }}">{{ category_name | replace: "-", " " }}</a>
             {% unless forloop.last %}, {% endunless %}
         {% endfor %}
       </header>
@@ -57,7 +57,7 @@
         {% for post in site.posts %}
         <div class="article-preview">
           <a href="{{ post.url }}"><h2>{{ post.title }}</h2></a>
-          <a href="{{ post.url }}"><img src="{{site.url}}{{ post.img }}" /></a>
+          <a href="{{ post.url }}"><img src="{{ post.img }}" /></a>
           <div class="post-stats">
             <i class="time-icon"></i>
             <span class="published-date">
@@ -70,7 +70,7 @@
             <small>
               {% for category in site.categories %}
                 {% capture category_name %}{{ category | first }}{% endcapture %}
-                  <a href="{{ site.url }}/category/{{ category_name | slugize }}">#{{ category_name | replace: "-", " " }}</a>
+                  <a href="{{ site.baseurl }}/category/{{ category_name | slugize }}">#{{ category_name | replace: "-", " " }}</a>
               {% endfor %}
             </small>
           </div>

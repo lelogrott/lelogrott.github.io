@@ -5,7 +5,7 @@ layout: default
 <div id="content-wrapper">
   <h2>{{ page.title }}<br>
     {% for category in page.categories %}
-      <small><a href="{{ site.url }}/categories/#{{ category }}">#{{ category | replace: "-", " " }}</a></small>
+      <small><a href="{{ site.baseurl }}/categories/#{{ category }}">#{{ category | replace: "-", " " }}</a></small>
     {% endfor %}
   </h2>
 
