@@ -29,21 +29,28 @@
           <a href="mailto:{{ site.email }}"><i class="email-icon"></i></a>
         </p>
         <h3>Posts</h3>
-          <div>
-            {% for post in site.posts %}
-              <a href="{{ post.url }}">{{ post.title}}</a>
-              <div class="post-stats">
-                <i class="time-icon"></i>
-                <span class="published-date">
-                  {{ post.date | date: "%b %-d, %Y" }}
-                </span> |
-                <a href="{{ post.url }}#disqus_thread">
-                  <i class="comment-icon"></i>
-                  <span class="disqus-comment-count" data-disqus-identifier="{{ post.disqus_identifier }}"></span>
-                </a>
-              </div>
-            {% endfor %}
-          </div>
+        <div>
+          {% for post in site.posts %}
+            <a href="{{ post.url }}">{{ post.title}}</a>
+            <div class="post-stats">
+              <i class="time-icon"></i>
+              <span class="published-date">
+                {{ post.date | date: "%b %-d, %Y" }}
+              </span> |
+              <a href="{{ post.url }}#disqus_thread">
+                <i class="comment-icon"></i>
+                <span class="disqus-comment-count" data-disqus-identifier="{{ post.disqus_identifier }}"></span>
+              </a>
+            </div>
+          {% endfor %}
+        </div>
+        <br>
+        <h3>Categories</h3>
+        {% for category in site.categories %}
+          {% capture category_name %}{{ category | first }}{% endcapture %}
+            <a href="{{ site.url }}/category/{{ category_name | slugize }}">{{ category_name | replace: "-", " " }}</a>
+            {% unless forloop.last %}, {% endunless %}
+        {% endfor %}
       </header>
       <section>
 
@@ -59,7 +66,13 @@
             <a href="{{ post.url }}#disqus_thread">
               <i class="comment-icon"></i>
               <span class="disqus-comment-count" data-disqus-identifier="{{ post.disqus_identifier }}"></span>
-            </a>
+            </a> |
+            <small>
+              {% for category in site.categories %}
+                {% capture category_name %}{{ category | first }}{% endcapture %}
+                  <a href="{{ site.url }}/categories/#{{ category_name | slugize }}">#{{ category_name | replace: "-", " " }}</a>
+              {% endfor %}
+            </small>
           </div>
           <br>
           {{ post.smmry }}

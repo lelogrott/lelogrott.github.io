@@ -25,11 +25,19 @@ twitter_url: https://twitter.com/lelogrott
 instagram_url: https://instagram.com/lelogrott
 google_analytics: UA-46402500-2
 disqus_name: grott-me
+permalinks: /post/:title/
 # Build settings
 markdown: kramdown
 theme: jekyll-theme-minimal
 plugins:
   - jekyll-feed
+  - jekyll-archives
+
+jekyll-archives:
+  enabled: [categories]
+  layout: archive
+  permalinks:
+    category: '/category/:name/'
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list

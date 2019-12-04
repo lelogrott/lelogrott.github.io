@@ -6,8 +6,7 @@ img: /assets/img/imprima-logo.jpg
 date:   2019-10-31 09:06:00 -0700
 comments: true
 disqus_identifier: comments_for_imprima
-category: Dev
-tags: [indie game, game development, unity]
+category: [programming, indie-game, game-development]
 ---
 
 ![Imprima - logo]({{site.url}}/assets/img/imprima-logo.jpg)

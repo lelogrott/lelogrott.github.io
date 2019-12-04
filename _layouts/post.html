@@ -3,6 +3,11 @@ layout: default
 ---
 
 <div id="content-wrapper">
-  <h2>{{ page.title }}</h2>
+  <h2>{{ page.title }}<br>
+    {% for category in page.categories %}
+      <small><a href="{{ site.url }}/categories/#{{ category }}">#{{ category | replace: "-", " " }}</a></small>
+    {% endfor %}
+  </h2>
+
   {{ content }}
 </div>
