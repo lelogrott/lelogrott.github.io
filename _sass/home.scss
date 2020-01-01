@@ -14,6 +14,10 @@ header div.avatar-container {
   &:last-child {
     border: none;
   }
+
+  .post-img {
+    width: 500px;
+  }
 }
 .post-stats {
   margin-top: -15px;
