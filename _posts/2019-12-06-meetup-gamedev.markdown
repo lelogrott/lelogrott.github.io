@@ -71,7 +71,7 @@ The event schedule was the following:
 
 That was it, we had figured it all out: the event would take place at the RD Lounge and the 3 speakers would give all the participants their perspective on different aspects of game development. Wait! The participants! We still had to fill that room with people!
 
-That's when things got even better, we reached out to [Juliano Cristian](https://twitter.com/jucristian) the voice of Amazon Lumberyard in Santa Catarina, he got really excited with the idea and wanted to help us to make it happen. We published the [event](https://www.meetup.com/gametech/events/257075745) in the [Meetup](https://www.meetup.com/) platform so everyone in the [Game Tech - Amazon Lumberyard - Sul Brasil](https://www.meetup.com/gametech/) community was aware that the event was happening in the next week.
+That's when things got even better, we reached out to [Juliano Cristian](https://twitter.com/jucristian) the voice of Amazon Lumberyard in Santa Catarina, he got really excited with the idea and wanted to help us to make it happen. We published the [event](https://www.meetup.com/gametech/events/257075745) in the [Meetup](https://www.meetup.com/) platform so everyone in the [Game Tech - Amazon Lumberyard - Sul Brasil](https://www.meetup.com/gametech/) community was aware that the event was happening next week.
 
 <div align="center">
   <img src="{{site.url}}/assets/img/1st_meetup_gamedev/juliano.jpeg"/>
