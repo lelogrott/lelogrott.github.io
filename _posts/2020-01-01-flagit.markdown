@@ -1,0 +1,36 @@
+---
+layout: post
+title:  "Flagit"
+smmry: So I've developed a ruby gem. It's not revolutionary, the code isn't complex, it has no magical solution to a problem that we face everyday. But why do I love it so much? Because it was my first gem, it fits my needs and it was really fun to code.
+img: /assets/img/flagit/flagit.svg
+date:   2020-01-01 11:00:00 -0300
+comments: true
+disqus_identifier: comments_for_flagit
+category: [programming, ruby, gem, open-source, flagit]
+---
+
+<a target="_blank" href="https://github.com/lelogrott/flagit">
+  <img style="width:500px" src="{{site.url}}/assets/img/flagit/flagit.svg"/>
+</a>
+
+So I've developed a ruby gem. It's not revolutionary, the code isn't complex, it has no magical solution to a problem that we face everyday. But why do I love it so much? Because it was my first gem, it fits my needs and it was really fun to code and I will tell you why.
+
+One day I was messing around with physics on Unity 2D, more and more power was being added to the main character on each commit that was pushed to master. After doing the basics I was trying to come up with something like a "sticky wall", when the player sticks to the wall, like in Super Meat Boy, Celeste and Towerfall, all by Matt Makes Games (they are a GREAT inspiration for me as a game developer prototype).
+
+<div align="center">
+  <img height="200px" src="{{site.url}}/assets/img/flagit/supermeatboy.gif"/>
+  <br/><small>Super Meat Boy sticking to the wall when jumping.</small><br/><br/>
+</div>
+
+When I finally pushed the commit I was so happy and proud that I wanted to tell my friends, I wanted to tweet about the "sticky wall" and how much I was excited with game development. That's when I thought
+
+>There must be some tool that allows me to tweet without leaving the terminal. Actually, I bet there is something that makes it easy to tweet my last commit URL.
+
+There wasn't. At lest not that I could find at that time. So I kept thinking "How difficult should be to code something that tweets for you?" And actually, it wasn't that hard. I found some Ruby wrappers for the Twitter API, did my own version of a Tweet client, put it together with the Git gem in order to indentify the last commit and get its URL and voilà, I had all I needed to build [Flagit](https://github.com/lelogrott/flagit).
+
+What amazes me the most is the hability of identifying the oportunity to build, create and innovate instead of accepting the reality and dealing with what you have already been provided with. I could just have looked for the tool, found out there wasn't any and manually tweeted it myself. But I wanted to build a gem for a long time, and that was the push that I needed.
+
+This post is more about the "why" I did it, instead of [Flagit](https://github.com/lelogrott/flagit) itself. But sure, if you are working on an open source project and want to announce some contribution or even some update on a personal repository, you should use [Flagit](https://github.com/lelogrott/flagit), it will make things easier for you in no time. And if you come to a situation where you wished there was something that did XYZ tasks for you, just build it. Build the thing you were wishing for, analyze how difficult it might be and consider if it deserves your time or not.
+
+Create.
+
