@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-
+<h1> {{ page.title }} </h1>
 {% for post in site.categories[page.title] %}
 <div class="article-preview">
   <a href="{{ post.url }}"><h2>{{ post.title }}</h2></a>
@@ -16,9 +16,8 @@ layout: default
       <span class="disqus-comment-count" data-disqus-identifier="{{ post.disqus_identifier }}"></span>
     </a> |
     <small>
-      {% for category in site.categories %}
-        {% capture category_name %}{{ category | first }}{% endcapture %}
-          <a href="{{ site.baseurl }}/category/{{ category_name | slugize }}">#{{ category_name | replace: "-", " " }}</a>
+      {% for category in post.categories %}
+          <a href="{{ site.baseurl }}/category/{{ category }}">#{{ category | replace: "-", " " }}</a>
       {% endfor %}
     </small>
   </div>
