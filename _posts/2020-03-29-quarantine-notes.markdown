@@ -41,6 +41,6 @@ With those tools I was able to build this simple app completely serverless named
 
 You can access the public repository and take a look at the code by clicking the card below:
 
-<a target="_blank" href="https://github.com/lelogrott/flagit">
+<a target="_blank" href="https://github.com/lelogrott/quarantinenotes">
   <img style="width:500px" src="{{site.url}}/assets/img/quarantine_notes/repo_card.svg"/>
 </a>
