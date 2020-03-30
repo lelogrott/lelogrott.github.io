@@ -26,7 +26,7 @@ Since that's what I see in all my social networks, why not to give people a 100%
 
 So, at this point I was convinced that a wall with some posts and a simple form was a great UI for me to start learning Vue, but then what about the backend? I didn't want to bring up a server to run this simple API that my app would be reaching out to, so that's when things got a lot more exciting.
 
-Let's build up a REST API using on Python using Flask, using Serverless framework to deploy and execute it on AWS Lambda and of course, using DynamoDB as our NoSQL serverless database. That may sound too complicated, but believe me, all people involved in those projects made it easy for us to do something like that by writing incredibly complete documentation.
+Let's build up a REST API with Python using Flask, Serverless framework to deploy and execute it on AWS Lambda and of course, having DynamoDB as our NoSQL serverless database. That may sound too complicated, but believe me, all people involved in those projects made it easy for us to do something like that by writing incredibly complete documentation.
 
 Breaking it down to what I've used on this project, we have:
 
