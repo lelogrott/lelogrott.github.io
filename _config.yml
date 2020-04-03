@@ -16,7 +16,7 @@
 title: Aurelio Grott
 email: aurelio@grott.me
 description: # this means to ignore newlines until "baseurl:"
-  Software Engineer, free software enthusiast, aspirant musician and an indie game developer prototype.
+  Software Engineer, free software enthusiast, aspiring musician, and an indie game developer prototype.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://grott.me" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: lelogrott
