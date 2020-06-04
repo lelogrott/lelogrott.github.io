@@ -42,9 +42,9 @@ The Serverless framework does an amazing job making it really easy and simple fo
 
 So basically, the serverless.yml file we create defines a [Service](https://www.serverless.com/framework/docs/providers/aws/guide/intro/#services) that needs to have its resources created/updated on AWS, and to do so it uses CloudFormation.
 
-Long story short, when working on my new project I followed the same steps I did before when creating [Quarantine Notes](https://quarantinenotes.com) and ended up deploying a service with the same name but not the same stack. This was basically, me UPDATING an already existent project with a total different stack instead of creating a separate one. That caused all previous Resources (tables and Lambda functions) to be deleted.
+Long story short, when working on my new project I followed the same steps I did before when creating [Quarantine Notes](https://quarantinenotes.com) and ended up deploying a service with the same name but not the same stack. This was basically, me UPDATING an already existent project with a totally different stack instead of creating a separate one. That caused all previous Resources (tables and Lambda functions) to be deleted.
 
-Once I noticed it I immediately deployed the correct project again, what created deleted Resources once again. Data couldn’t be restored.
+Once I noticed it I immediately deployed the correct project again, which created deleted Resources once again. Data couldn’t be restored.
 
 <div align="center">
   <img style="width:300px" src="{{site.url}}/assets/img/data_loss/thanks.gif"/>
@@ -55,12 +55,12 @@ Once I noticed it I immediately deployed the correct project again, what created
 
 One word action: <b>BACKUP</b>.
 
-Back in 2017, Amazon announced [Dynamo DB Backups](https://aws.amazon.com/blogs/aws/new-for-amazon-dynamodb-global-tables-and-on-demand-backup/) and later on ways to [schedule them](https://aws.amazon.com/blogs/database/a-serverless-solution-to-schedule-your-amazon-dynamodb-on-demand-backup/). Didn’t take long for Serverless to provide us with a pre-build solution for it.
+Back in 2017, Amazon announced [Dynamo DB Backups](https://aws.amazon.com/blogs/aws/new-for-amazon-dynamodb-global-tables-and-on-demand-backup/) and later on ways to [schedule them](https://aws.amazon.com/blogs/database/a-serverless-solution-to-schedule-your-amazon-dynamodb-on-demand-backup/). It didn’t take long for Serverless to provide us with a pre-build solution for it.
 
 Apparently you can [Automate your DynamoDB Backups with Serverless in less than 5 minutes](https://www.serverless.com/blog/automatic-dynamodb-backups-serverless/), I have tried and if you leave the deploy time out of the equation you can automate your backups in seconds.
 
 Their approach on how to automate this process is really safe, it is a separate service on AWS that requires a different role with dynamodb:ListTables and dynamodb:CreatBackup actions.
-You can set up a custom retention period for your tables and adjust backup rate as needed. This service can handle multiple tables, so if you create a new DynamoDB table in any other project, just be sure to add the table’s name to your backup service and you should be good to go.
+You can set up a custom retention period for your tables and adjust the backup rate as needed. This service can handle multiple tables, so if you create a new DynamoDB table in any other project, just be sure to add the table’s name to your backup service and you should be good to go.
 
 _So, all done. Right?_ __- Wrong.__
 
@@ -80,11 +80,11 @@ But that will only be necessary if the table gets deleted, and CloudFormation ha
 ### Action Round 3
 
 After establishing a backup routine and logging notes/replies before inserting them into the database there is one more thing left to do, prevent the table from being mistakenly deleted.
-When working on your serverless.yml file you can make usage of CloudFormation attributes in its default format under the "resources" section and CloudFormation provide us with a couple of attributes that come in handy: [DeletionPolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-deletionpolicy.html) and [UpdateReplacePolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-updatereplacepolicy.html).
+When working on your serverless.yml file you can make usage of CloudFormation attributes in its default format under the "resources" section and CloudFormation provides us with a couple of attributes that come in handy: [DeletionPolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-deletionpolicy.html) and [UpdateReplacePolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-updatereplacepolicy.html).
 
 Names make it self-explanatory but, just to be crystal clear, those attributes can be applied to any resource on your stack and assigning them the value "Retain" they'll retain or (in some cases) backup the existing physical instance of a resource when instructions are to replace/delete them, making it another safety measure that is worth using!
 
-That's it, I know this was a long post but I feel that it was needed. Answering the question in the title: now we analyze it, understand what happened and why it happened. Only doing that we'll be able to work on prevention and data recovering methods.
+That's it, I know this was a long post but I feel that it was needed. Answering the question in the title: now we analyze it, understand what happened and why it happened. Only doing that we'll be able to work on prevention and data recovery methods.
 
 Stay safe!
 
