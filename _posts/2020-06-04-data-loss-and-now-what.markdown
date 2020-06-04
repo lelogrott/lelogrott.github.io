@@ -42,7 +42,7 @@ The Serverless framework does an amazing job making it really easy and simple fo
 
 So basically, the serverless.yml file we create defines a [Service](https://www.serverless.com/framework/docs/providers/aws/guide/intro/#services) that needs to have its resources created/updated on AWS, and to do so it uses CloudFormation.
 
-Long story short, when working on my new project I followed the same steps I did before when creating [Quarantine Notes](https://quarantinenotes.com) and ended up deploying a service with the same name but not the same stack. This caused the already existing project to be UPDATED and have its previous Resources (tables and Lambda functions) deleted.
+Long story short, when working on my new project I followed the same steps I did before when creating [Quarantine Notes](https://quarantinenotes.com) and ended up deploying a service with the same name but not the same stack. This was basically, me UPDATING an already existent project with a total different stack instead of creating a separate one. That caused all previous Resources (tables and Lambda functions) to be deleted.
 
 Once I noticed it I immediately deployed the correct project again, what created deleted Resources once again. Data couldn’t be restored.
 
@@ -75,6 +75,14 @@ The logs didn’t contain ANY useful information, the data from POST requests we
 </div>
 
 It’s better to be safe than sorry. I’ve decided to print every JSON formatted entry right after inserting it into the table, that way if for some reason backup tables don’t work I’ll be able to do some extra work and retrieve data from logs.
+But that will only be necessary if the table gets deleted, and CloudFormation has a way to help us prevent that.
+
+### Action Round 3
+
+After establishing a backup routine and logging notes/replies before inserting them into the database there is one more thing left to do, prevent the table from being mistakenly deleted.
+When working on your serverless.yml file you can make usage of CloudFormation attributes in its default format under the "resources" section and CloudFormation provide us with a couple of attributes that come in handy: [DeletionPolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-deletionpolicy.html) and [UpdateReplacePolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-updatereplacepolicy.html).
+
+Names make it self-explanatory but, just to be crystal clear, those attributes can be applied to any resource on your stack and assigning them the value "Retain" they'll retain or (in some cases) backup the existing physical instance of a resource when instructions are to replace/delete them, making it another safety measure that is worth using!
 
 That's it, I know this was a long post but I feel that it was needed. Answering the question in the title: now we analyze it, understand what happened and why it happened. Only doing that we'll be able to work on prevention and data recovering methods.
 
